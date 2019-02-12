@@ -13,5 +13,7 @@ Solution:
 1. To start the desktop environment using Intel graphics card, you first need to run `sudo prime-select intel` and reboot (or logout and login again)
 2. Every time after reboot, run the script, start-nvidia.sh , then you will be able to run CUDA programs. You can put it in your $HOME/bin folder.
 
+What the script start-nvidia.sh does is that it searches for the Nvidia kernel module nvidia.ko, and load it together with dependencies.
+
 Since NVIDIA updates their driver frequently, the location and filename of the kernel driver can change from /lib/modules/4.15.0-43-generic/updates/dkms/nvidia.ko at any time. Moreover, its dependency driver ipmi_msghandler might also change.
 You might need to modify the script accordingly.
